@@ -14,9 +14,8 @@ class CreateAlunoCursosTable extends Migration
     public function up()
     {
         Schema::create('aluno_cursos', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('aluno_id')->constrained();
-            $table->foreignId('curso_id')->constrained();
+            $table->foreignId('aluno_id')->constrained('alunos');
+            $table->foreignId('curso_id')->constrained('cursos');
             $table->timestamps();
         });
     }

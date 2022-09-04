@@ -20,7 +20,7 @@ class CreateCursosTable extends Migration
             $table->date('data_termino');
             $table->tinyInteger('carga_horaria');
             $table->enum('periodo',['Manha','Tarde','Noite']);
-            $table->decimal('preco')->change();
+            $table->decimal('preco');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });

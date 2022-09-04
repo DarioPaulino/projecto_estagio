@@ -19,8 +19,8 @@ class CreateAlunosTable extends Migration
             $table->string('numero_bi',50);
             $table->string('telefone');
             $table->string('localizacao');
-            $table->string('foto');
-            $table->boolean('estado');
+            $table->string('foto')->default('default.jpg');
+            $table->boolean('estado')->default(false);
             $table->timestamps();
         });
     }

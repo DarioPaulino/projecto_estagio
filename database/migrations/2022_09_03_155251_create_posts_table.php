@@ -20,8 +20,8 @@ class CreatePostsTable extends Migration
             $table->longText('description');
             $table->string('editor');
             $table->date('data_post');
-            $table->foreignId('curso_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('curso_id')->constrained('cursos');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }
