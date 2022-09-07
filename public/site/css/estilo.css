@@ -1,0 +1,255 @@
+
+/*________________________________NAV BAR_____________________________________*/
+.login_menu{
+	margin-right: 20px;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 10px;
+	border-radius: 10px;
+	border: 1px solid white;
+	font-family: Arial;
+	color: white;
+}
+
+
+/*Cor barra de menu*/
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: #154877;
+}
+/*Cor linsk*/
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: arial;
+}
+.nav-link{
+	margin-right: 10px;
+	font-family: Arial;
+}
+
+/*___Brand color__*/
+.navbar-brand{
+	color: white;
+}
+.navbar-brand:hover{
+	color: white;
+}
+/*___________________________________INTRODUÇÃO______________________________*/
+#carrossel{
+	margin-top: 50px;
+}
+/*__________________INTRODUÇÃO______________*/
+#introducao{
+	background-color: #154877;
+}
+#introducao h2{
+	margin-top: 180px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: white;
+	font-size: 45px;
+	font-family: arial;
+}
+#introducao p{
+	font-size: 17px;
+	color: white;
+	font-family: arial;
+
+}
+.img_intro{
+	margin-top: 40px;
+	width: 350px;
+	height: 500px;
+}
+
+/*__________________________PARTE 2______________________________*/
+.card{
+
+	margin-bottom: 50px;
+}
+#part2 h1{
+	text-align: center;
+	margin-top: 50px;
+}
+/*____________________CARDS_________________*/
+
+.card{
+	box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.2);
+}
+/*___________________________MISSÃO______________________________*/
+
+#missao{
+	background-color: #154877;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#missao h2{
+	text-align: center;
+	color:white;
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+#missao p{
+	text-align: center;
+	color:white;
+	font-size: 20px;
+}
+
+/*__________________________RODAPE_______________*/
+#rodape{
+	padding-top: 20px;
+	text-align: center;
+	color:white;
+	background-color:#2b2f31;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#rodape2{
+	background-color: #222425;
+}
+#contacto{
+	padding-bottom: 20px;
+}
+
+/*=================================== PAGINA INSCRICAO ==================================*/
+/*____________________________INSCRIÇÃO____________________*/
+
+#inscricao{
+	margin-top: 58px;
+	height: 750px;	
+}
+#inscricao h4{
+	text-align: center;	
+}
+#inscricao_esquerdo{
+	height: 100%;
+	margin-top: 10px;
+	background-color: #154877;
+}
+
+.texto_inscricao{
+	margin-top: 35%;
+	margin-left: 7%;
+	text-align: center;
+	width: 80%; 
+	color: white;
+}
+#inscricao input{
+	width: 300px;	
+}
+/*formulario*/
+.form_inscricao{
+	width: 400px;
+	border-radius: 20px;
+	padding: 40px;
+	margin: auto;
+	margin-top: 5%;
+	height: 500px;
+	border: 2px solid #154877;
+}
+/*botao formulario*/
+.submit{
+	background-color: #154877;
+	border: none;
+	height:35px;
+	border-radius: 10px;
+	color: white;
+}
+.submit:hover{
+	background-color: #fff;
+	border:2px solid #154877;
+	color: #154877;
+}
+
+/*===========================FORMULÁRIO===============================*/
+#login{
+	height: 750px;	
+}
+#login h4{
+	text-align: center;	
+}
+#login input{
+	width: 300px;	
+}
+/*formulario*/
+.form_login{
+	width: 400px;
+	border-radius: 20px;
+	padding: 40px;
+	margin: auto;
+	margin-top: 10%;
+	height: 400px;
+	border: 2px solid #154877;
+}
+
+
+/*====================================MEDIA QUERY============================================*/
+/*===========================================================================================*/
+
+@media (min-width: 100px) and (max-width: 768px){
+		#intro1{
+			background-color: white;
+		}
+		#intro1 h2{
+			color: #154877;
+			margin-top: 60px;
+			font-size: 30px;
+		}
+		#intro1 p{
+			color: #154877;
+			text-align: center;
+			font-size: 16px;
+			margin-bottom: 50px;
+		}
+		.img_intro{
+			width: 240px;
+			height: 300px;
+		}
+		/*___inscricao_____*/
+	#inscricao{
+		height: auto;	
+	}
+	#inscricao_esquerdo{
+		background-color: #154877;
+	}
+	#inscricao input{
+		width: 100%;	
+	}
+	/*formulario*/
+	.form_inscricao{
+			width: 350px;
+			margin-top: 50px;
+			margin-bottom: 100px;
+	}
+	/*login*/
+	#login{
+		background-color:  #154877;
+	}
+	#login h4{
+		text-align: center;	
+	}
+	#login input{
+		width: 100%;	
+	}
+	.form_login{
+		background-color: white;
+		width: 300px;
+		border-radius: 20px;
+		padding: 40px;
+		margin: auto;
+		margin-top: 50%;
+		height: auto;
+		border: 2px solid white;
+	}
+	.texto_inscricao{
+	margin-top: 15%;
+	margin-bottom: 15%;
+	margin-left: 7%;
+	text-align: center;
+	width: 80%; 
+	color: white;
+	}
+}	

@@ -1,7 +1,9 @@
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
+           
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -16,8 +18,8 @@
             @csrf
 
             <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-label for="login" value="{{ __('Email / Telefone / Nome') }}" />
+                <x-jet-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')" required autofocus />
             </div>
 
             <div class="mt-4">
@@ -44,5 +46,8 @@
                 </x-jet-button>
             </div>
         </form>
+        
     </x-jet-authentication-card>
 </x-guest-layout>
+
+

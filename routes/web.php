@@ -1,6 +1,10 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Site\HomeController;
+use App\Http\Controllers\Site\InscricaoController;
+use App\Http\Controllers\Site\LoginController;
+use App\Http\Controllers\Site\CursoController;
+use App\Http\Controllers\Site\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +18,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('Site')->group(function(){
+    #Rota para a pagina do site
+    Route::get('/', [HomeController::class,"index"])->name('home');
+
+    #Rota para inscricao
+    Route::get('/inscricao',[InscricaoController::class,"index"])->name('inscricao');
+    Route::post('/inscricao',[InscricaoController::class,"store"])->name('inscricao.store');
+    
+    #Rota para o Login
+    Route::get('/redirects',[LoginController::class,"index"]);
+
+    #Rota para o Curso
+    Route::get('/curso',[CursoController::class,"index"])->name('curso');
+
+    #Rota para Sobre
+    Route::get('/sobre-nos',[AboutController::class,"__invoke"])->name('sobre');
+
+});   
+
+
+
+
+Route::get('/conta', function () {
+    return view('site.login.index');
 });
 
-Route::get('/redirects',[HomeController::class,"index"]);
+
 
 Route::middleware([
     'auth:sanctum',
